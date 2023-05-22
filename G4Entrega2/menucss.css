@@ -1,0 +1,148 @@
+html {background-color: #125A6B;}
+body {
+    min-height: 800px;
+    max-height: 800px;
+    max-width: 1600px;
+    min-width: 1800px;
+    margin: 0 auto;
+    background: rgb(18,90,107);
+    background: linear-gradient(0deg, rgb(24, 22, 68) 0%, rgb(16, 60, 73) 35%, rgb(28, 97, 111) 100%);
+}
+#arte {width: 200px;height: auto; border-radius: 20px;
+    background: rgb(18,90,107);
+    background: linear-gradient(0deg, rgb(24, 81, 93) 10%, rgb(37, 101, 120) 25%, rgb(51, 133, 151) 65%);
+    position: absolute;
+     left: 20px;
+     top: 15px;}
+
+#inicio {width: 100px;height: auto; border-radius: 20px;
+    background-color: #7AACB8;
+    text-decoration-color: white;
+    position: absolute;
+        z-index: 2;
+        cursor: pointer;
+    left: 280px;
+    top: 15px;}
+#activi {width: 180px;height: auto; border-radius: 20px;
+    background-color: #7AACB8;
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+    left: 400px;
+    top: 15px;}
+#efecti {width: 180px;height: auto; border-radius: 20px;
+    background-color: #7AACB8;
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+    left: 600px;
+    top: 15px;}
+#refer {width: 180px;height: auto; border-radius: 20px;
+    background-color: #7AACB8;
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+    left: 800px;
+    top: 15px;}
+#menu1 {width: 910px;height: 80px;
+    background: rgb(122, 172, 184);
+    background: linear-gradient(0deg, rgb(217, 231, 237) 0%, rgb(130, 185, 200) 35%, rgb(106, 151, 162) 100%);
+    position: absolute;
+     left: 0px;
+     top: 0px;}
+
+#menu4 {width: 1020px;height: 100px;border-radius: 25px;
+    background: rgb(122, 172, 184);
+    background: linear-gradient(0deg, rgb(217, 231, 237) 0%, rgb(130, 185, 200) 35%, rgb(106, 151, 162) 100%);
+    position: absolute;
+    left: 0px;
+    top: 0px;}
+
+
+    #ini1 {width: 100px;height: auto; border-radius: 20px;
+        background-color: #417988;
+        text-decoration-color: white;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        left: 280px;
+        top: 15px;}
+    #act1 {width: 180px;height: auto; border-radius: 20px;
+        background-color: #417988;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        left: 400px;
+        top: 15px;}
+    #efe1 {width: 180px;height: auto; border-radius: 20px;
+        background-color: #417988;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        left: 600px;
+        top: 15px;}
+    #ref1 {width: 180px;height: auto; border-radius: 20px;
+        background-color:#417988;
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+        left: 800px;
+        top: 15px;}
+
+        #ini2 {width: 100px;height: auto; border-radius: 20px;
+            background-color: #FFFFFF;
+            position: absolute;
+            left: 280px;
+            top: 15px;}
+            #act2 {width: 180px;height: auto; border-radius: 20px;
+                background-color: #FFFFFF;
+                position: absolute;
+                left: 400px;
+                top: 15px;}
+                #efe2 {width: 180px;height: auto; border-radius: 20px;
+                    background-color: #FFFFFF;
+                    position: absolute;
+                    left: 600px;
+                    top: 15px;}
+                    #ref2 {width: 180px;height: auto; border-radius: 20px;
+                        background-color:#FFFFFF;
+                        position: absolute;
+                        left: 800px;
+                        top: 15px;
+}
+#refe1 {
+    width: 930px;
+    height: 600px;
+    background-color: #B55C7C;
+    position: absolute;
+    top: 130px;
+    left: 40px;
+    border-radius: 50px;
+}
+#refe2 {
+    width: 280px;
+    height: 60px;
+    background-color: #efb4ca;
+    position: absolute;
+    top: 150px;
+    left: 60px;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#tire1 {
+    width: 260px;
+    height: 60px;
+    position: absolute;
+    top: 138px;
+    left: 75px;
+}
+#tire2 {
+    width: 860px;
+    height: 600px;
+    line-height: 1;
+    position: absolute;
+    top: 210px;
+    left: 80px;
+}

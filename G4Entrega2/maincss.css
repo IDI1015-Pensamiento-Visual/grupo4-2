@@ -1,0 +1,107 @@
+#title {width: 300px;height: 180px; border-radius: 20px;
+    background-color: #5091a3;
+    position: absolute;
+    left: 530px;
+    top: 150px;
+}
+#do1 {
+    width: 25px;
+    height: 25px;
+    border: 10px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    position: absolute;
+    left: 665px;
+    top: 275px;
+    transform: rotate(45deg);
+}
+#do2 {
+    width: 18px;
+    height: 18px;
+    border: 7px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    position: absolute;
+    left: 240px;
+    top: 415px;
+    transform: rotate(45deg);
+}
+#do3 {
+    width: 18px;
+    height: 18px;
+    border: 7px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    position: absolute;
+    left: 670px;
+    top: 415px;
+    transform: rotate(45deg);
+}
+#do4 {
+    width: 18px;
+    height: 18px;
+    border: 7px solid #FFF;
+    border-left: 0;
+    border-top: 0;
+    position: absolute;
+    left: 1100px;
+    top: 415px;
+    transform: rotate(45deg);
+}
+
+#dat1 {width: 220px;height: 60px; border-radius: 20px;
+    background-color: #5091a3;
+    position: absolute;
+    left: 145px;
+    top: 350px;
+}
+#dat2 {width: 220px;height: 60px; border-radius: 20px;
+    background-color: #B55C7C;
+    position: absolute;
+    left: 570px;
+    top: 350px;
+}
+#dat3 {width: 220px;height: 60px; border-radius: 20px;
+    background-color: #706A28;
+    position: absolute;
+    left: 1000px;
+    top: 350px;
+}
+#blo1 {width: 370px;height: 300px; border-radius: 20px;
+    background-color: rgb(28, 97, 111);
+    position: absolute;
+    box-shadow: 0 0 7px 7px  #5091a3;
+    left: 70px;
+    top: 460px;
+}
+#blo2 {width: 370px;height: 300px; border-radius: 20px;
+    background-color: rgb(28, 97, 111);
+    position: absolute;
+    box-shadow: 0 0 7px 7px  #d195ab;
+    left: 500px;
+    top: 460px;
+}
+#blo3 {width: 370px;height: 300px; border-radius: 20px;
+    background-color: rgb(28, 97, 111);
+    box-shadow: 0 0 7px 7px  #bdb773;
+    position: absolute;
+    left: 930px;
+    top: 460px;
+}
+
+
+#desc1 {width: 350px;height: 290px;
+    position: absolute;
+    left: 80px;
+    top: 467px;
+}
+#desc2 {width: 350px;height: 300px;
+    position: absolute;
+    left: 510px;
+    top: 467px;
+}
+#desc3 {width: 350px;height: 300px;
+    position: absolute;
+    left: 940px;
+    top: 467px;
+}

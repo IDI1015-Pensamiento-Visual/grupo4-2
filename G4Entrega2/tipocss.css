@@ -1,0 +1,335 @@
+#gale1 {
+    position: absolute;
+z-index: 2;
+    cursor: pointer;
+        top: 690px;
+        left: 770px;
+        transform: translate(-50%, -50%);
+        height: 90px;
+        width: 200px;
+        border-radius: 30px;
+        background-color: rgb(51, 133, 151);
+}
+#gale2 {
+    position: absolute;
+z-index: 2;
+    cursor: pointer;
+        top: 690px;
+        left: 770px;
+        transform: translate(-50%, -50%);
+        height: 90px;
+        width: 210px;
+        border-radius: 30px;
+        background-color: #7AACB8;
+        box-shadow: 0 0 7px 8px  rgb(51, 133, 151);
+}
+
+
+#bidi0 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 660px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 200px;
+            border-top-left-radius: 13rem;
+            border-bottom-left-radius: 13rem;
+            background-color: #B55C7C;
+}
+#bidib {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 660px;
+            transform: translate(-50%, -50%);
+            height: 440px;
+            width: 220px;
+            border-top-left-radius: 14rem;
+            border-bottom-left-radius: 14rem;
+            background-color: #efb4ca;
+            box-shadow: 0 0 7px 8px  #B55C7C;
+}
+#bidia {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 240px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 200px;
+            border-top-left-radius: 13rem;
+            border-bottom-left-radius: 13rem;
+            background-color: #B55C7C;
+}
+#bidic {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 240px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 200px;
+            border-top-left-radius: 13rem;
+            border-bottom-left-radius: 13rem;
+            background-color: #efb4ca;
+}
+#bidi1 {
+    position: absolute;
+            top: 400px;
+            left: 485px;
+            transform: translate(-50%, -50%);
+            height: 460px;
+            width: 270px;
+            border-top-right-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            background-color: #B55C7C;
+}
+#bidi2 {
+    position: absolute;
+            top: 400px;
+            left: 780px;
+            transform: translate(-50%, -50%);
+            height: 460px;
+            width: 300px;
+            border-radius: 1rem;
+            background-color: #B55C7C;
+}
+#bidi3 {
+    position: absolute;
+            top: 400px;
+            left: 990px;
+            transform: translate(-50%, -50%);
+            height: 460px;
+            width: 100px;
+            border-top-left-radius: 1rem;
+            border-bottom-left-radius: 1rem;
+            background-color: #B55C7C;
+}
+#bidi4 {
+    position: absolute;
+            top: 400px;
+            left: 1354px;
+            transform: translate(-50%, -50%);
+            height: 0;
+            width: 400px;
+            border-top: 230px solid transparent;
+            border-bottom: 230px solid transparent;
+            border-left:230px solid #B55C7C;
+}
+
+
+#tridi0 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 880px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 200px;
+            border-top-right-radius: 13rem;
+            border-bottom-right-radius: 13rem;
+            background-color: #706A28;
+}
+#tridib {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 880px;
+            transform: translate(-50%, -50%);
+            height: 440px;
+            width: 220px;
+            border-top-right-radius: 14rem;
+            border-bottom-right-radius: 14rem;
+            background-color: #B8B382;
+            box-shadow: 0 0 7px 8px  #706A28;
+}
+
+#tridia1 {
+position: absolute;
+z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 1245px;
+            transform: translate(-50%, -50%);
+            height: 0;
+            width: 400px;
+            border-top: 100px solid transparent;
+            border-bottom: 100px solid transparent;
+            border-left:200px solid #706A28;
+}
+#tridia2 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 400px;
+            left: 895px;
+            transform: translate(-50%, -50%);
+            height: 250px;
+            width: 100px;
+            border-top-left-radius: 2rem;
+            border-bottom-left-radius: 2rem;
+            background-color: #706A28;
+}
+
+#tridic1 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+                top: 400px;
+                left: 1245px;
+                transform: translate(-50%, -50%);
+                height: 0;
+                width: 400px;
+                border-top: 100px solid transparent;
+                border-bottom: 100px solid transparent;
+                border-left:200px solid #B8B382;
+    }
+    #tridic2 {
+        position: absolute;
+        z-index: 2;
+        cursor: pointer;
+                top: 400px;
+                left: 895px;
+                transform: translate(-50%, -50%);
+                height: 250px;
+                width: 100px;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+                background-color: #B8B382;
+    }
+
+#tridi1 {
+    position: absolute;
+            top: 400px;
+            left: 585px;
+            transform: translate(-50%, -50%);
+            height: 460px;
+            width: 500px;
+            border-radius: 3rem;
+            background-color: #B8B382;
+}
+#tridi2 {
+    position: absolute;
+            top: 400px;
+            left: 585px;
+            transform: translate(-50%, -50%);
+            height: 440px;
+            width: 480px;
+            border-radius: 3rem;
+            background-color: #706A28;
+}
+
+
+#arbi {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 360px;
+            left: 580px;
+            height: 100px;
+            width: 200px;
+}
+#arbi1 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 360px;
+            left: 580px;
+            height: 100px;
+            width: 200px;
+}
+#artri {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 365px;
+            left: 760px;
+            height: 100px;
+            width: 200px;
+}
+#brtri {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 390px;
+            left: 760px;
+            height: 100px;
+            width: 200px;
+}
+#artri1 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 365px;
+            left: 760px;
+            height: 100px;
+            width: 200px;
+}
+#brtri1 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 390px;
+            left: 760px;
+            height: 100px;
+            width: 200px;
+}
+
+
+
+#vuel1 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 550px;
+            left: 210px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 200px;
+}
+#vuel2 {
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+            top: 555px;
+            left: 980px;
+            transform: translate(-50%, -50%);
+            height: 400px;
+            width: 200px;
+}
+
+#tex1 {
+    position: absolute;
+            top: 250px;
+            left: 380px;
+            height: 460px;
+            width: 240px;
+}
+#tex2 {
+    position: absolute;
+            top: 250px;
+            left: 665px;
+            height: 460px;
+            width: 240px;
+}
+#tex3 {
+    position: absolute;
+            top: 240px;
+            left: 965px;
+            height: 460px;
+            width: 190px;
+}
+#tex4 {
+    position: absolute;
+            top: 240px;
+            left: 395px;
+            height: 440px;
+            width: 380px;
+}

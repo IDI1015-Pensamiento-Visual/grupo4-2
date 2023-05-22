@@ -1,0 +1,102 @@
+<div  id="graph2">
+    <sty1le>
+  
+      .axis .domain {
+        display1: none;
+      }
+      
+      </sty1le>
+      <svg width1="1100" height1="500"></svg>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+  
+      var svg1 = d3.select("svg"),
+          margin1 = {top: 20, right: 20, bottom: 30, left: 40},
+          width1 = +svg1.attr("width") - margin1.left - margin1.right,
+          height1 = +svg1.attr("height") - margin1.top - margin1.bottom,
+          g1 = svg1.append("g").attr("transform", "translate(" + margin1.left + "," + margin1.top + ")");
+      
+      var x01 = d3.scaleBand()
+          .rangeRound([0, width1])
+          .paddingInner(0.3);
+      
+      var x2 = d3.scaleBand()
+          .padding(0.2);
+      
+      var y1 = d3.scaleLinear()
+          .rangeRound([height1, 20]);
+      
+      var z = d3.scaleOrdinal()
+          .range(['#B55C7C', '#CB7695', '#706A28', '#B8B382', "#a05d56", "#d0743c", "#ff8c00"]);
+      
+      d3.csv("data1.csv", function(d, i, columns) {
+        for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
+        return d;
+      }, function(error, data) {
+        if (error) throw error;
+      
+        var keys = data.columns.slice(1);
+      
+        x01.domain(data.map(function(d) { return d.State; }));
+        x21.domain(keys).rangeRound([0, x01.bandwidth1()]);
+        y1.domain([30, d3.max(data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
+      
+        g1.append("g")
+          .selectAll("g")
+          .data(data)
+          .enter().append("g")
+            .attr("transform", function(d) { return "translate(" + x01(d.State) + ",0)"; })
+          .selectAll("rect")
+          .data(function(d) { return keys
+  .map(function(key) { return {key: key, value: d[key]}; }); })
+          .enter().append("rect")
+            .attr("x", function(d) { return x21
+    (d.key); })
+            .attr("y1", function(d) { return y1(d.value); })
+            .attr("width1", x21
+  .bandwidth1())
+            .attr("height1", function(d) { return height1 - y1(d.value); })
+            .attr("fill", function(d) { return z(d.key); });
+      
+        g1.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(0," + height1 +")")
+            .call(d3.axisbottom(x01));
+      
+        g1.append("g")
+            .attr("class", "axis")
+            .call(d3.axisleft(y1).ticks(null, "s"))
+          .append("text")
+            .attr("x", 2)
+            .attr("y1", y1(y1.ticks().pop()) + 0.5)
+            .attr("dy1", "0.32em")
+            .attr("fill", "#000")
+            .attr("font-size", 20)
+            .attr("font-weight", "bold")
+            .attr("text-anchor", "start")
+            .text("Niveles de Ansiedad (%)");
+      
+        var legend1 = g1.append("g")
+            .attr("font-family1", "sans-serif")
+            .attr("font-size", 11)
+            .attr("text-anchor", "end")
+          .selectAll("g")
+          .data(keys
+.slice().reverse())
+          .enter().append("g")
+            .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+      
+        legend1.append("rect")
+            .attr("x", width1 - 19)
+            .attr("width1", 19)
+            .attr("height1", 19)
+            .attr("fill", z);
+      
+        legend1.append("text")
+            .attr("x", width1 - 24)
+            .attr("y1", 10.5)
+            .attr("dy1", "0.32em")
+            .text(function(d) { return d; });
+      });
+      </script>
+</div>
