@@ -1,0 +1,184 @@
+img {
+    width: 300px;
+    border-radius: 20px;
+}
+#im1 {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    
+}
+#im2 {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 80px;
+    left: 420px;
+}
+#im4 {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 95px;
+    left: 740px;
+}
+#im5 {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 65px;
+    left: 1060px;
+}
+#im6 {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 370px;
+    left: 240px;
+}
+#im3 {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 440px;
+    left: 560px;
+}
+#im7 {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 380px;
+    left: 880px;
+}
+#de1 {
+    width: 300px;
+    height: 205.8px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    border-radius: 20px;
+    background-color: #B55C7C;
+}
+#de2 {
+    width: 300px;
+    height: 238.84px;
+    position: absolute;
+    top: 80px;
+    left: 420px;
+    border-radius: 20px;
+    background-color: #bdb773;
+}
+#de4 {
+    width: 300px;
+    height: 210.43px;
+    position: absolute;
+    top: 95px;
+    left: 740px;
+    border-radius: 20px;
+    background-color: #B55C7C;
+}
+#de5 {
+    width: 300px;
+    height: 280.55px;
+    position: absolute;
+    top: 65px;
+    left: 1060px;
+    border-radius: 20px;
+    background-color: #B55C7C;
+}
+#de6 {
+    width: 300px;
+    height: 257.75px;
+    position: absolute;
+    top: 370px;
+    left: 240px;
+    border-radius: 20px;
+    background-color: #bdb773;
+}
+#de3 {
+    width: 300px;
+    height: 123.23px;
+    position: absolute;
+    top: 440px;
+    left: 560px;
+    border-radius: 20px;
+    background-color: #B55C7C;
+}
+#de7 {
+    width: 300px;
+    height: 221.7px;
+    position: absolute;
+    top: 380px;
+    left: 880px;
+    border-radius: 20px;
+    background-color: #B55C7C;
+}
+
+#regr1 {width: 110px;height: auto; border-radius: 30px;
+    background-color: rgb(16, 60, 73);
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+    left: 50px;
+    top: 20px;
+}
+#regr2 {width: 110px;height: auto; border-radius: 30px;
+    background-color: #7AACB8;
+    position: absolute;
+    z-index: 2;
+        cursor: pointer;
+    left: 50px;
+    top: 20px;
+}
+
+#gal1 {
+    width: 280px;
+    height: 80px;
+    position: absolute;
+    top: 150px;
+    left: 110px;
+}
+#gal2 {
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    top: 150px;
+    left: 420px;
+}
+#gal4 {
+    width: 280px;
+    height: 210.43px;
+    position: absolute;
+    top: 145px;
+    left: 755px;
+}
+#gal5 {
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    top: 150px;
+    left: 1060px;
+}
+#gal6 {
+    width: 280px;
+    height: 80px;
+    position: absolute;
+    top: 440px;
+    left: 250px;
+}
+#gal3 {
+    width: 280px;
+    height: 80px;
+    position: absolute;
+    top: 440px;
+    left: 570px;
+}
+#gal7 {
+    width: 280px;
+    height: 80px;
+    position: absolute;
+    top: 440px;
+    left: 890px;
+}

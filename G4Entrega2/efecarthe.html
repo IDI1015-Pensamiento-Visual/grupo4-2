@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" href="menucss.css">
+  <link rel="stylesheet" href="efecgraph.css">
+  <link rel="stylesheet" href="efeccss.css">
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script type="text/javascript" src="menujava.js"></script>
+  <script type="text/javascript" src="efecjava.js"></script> 
+  <style>
+    body {
+        font: 10px calibri;
+    }
+</style>
+  <title>¿Qué es la arteterapia? (Grupo 4)</title>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+  <div id="cuer">
+  </div>
+    <div id="menu1"></div>
+    <div id="menu4"></div>
+
+    <div id="arte">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">ARTETERAPIA</font></h1>
+    </div>
+    <div id="inicio">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Inicio</font></h1>
+    </div>
+    <div id="activi">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Actividades</font></h1>
+    </div>
+    <div id="efe2">
+      <h1 style="text-align: center;"><font size="6" color="#125A6B">Efectividad</font></h1>
+    </div>
+    <div id="refer">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Referencias</font></h1>
+    </div>
+
+
+    <div id="ini1">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Inicio</font></h1>
+    </div>
+    <div id="act1">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Actividades</font></h1>
+    </div>
+    <div id="efe1">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Efectividad</font></h1>
+    </div>
+    <div id="ref1">
+      <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Referencias</font></h1>
+    </div>
+
+
+
+<div  id="graph1" class="graph">
+    <style>
+
+      .axis .domain {
+        display: none;
+      }
+      
+      </style>
+      <svg width="1100" height="500"></svg>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script>
+
+      var svg = d3.select("svg"),
+          margin = {top: 20, right: 20, bottom: 30, left: 40},
+          width = +svg.attr("width") - margin.left - margin.right,
+          height = +svg.attr("height") - margin.top - margin.bottom,
+          g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+      
+      var x0 = d3.scaleBand()
+          .rangeRound([0, width])
+          .paddingInner(0.3);
+      
+      var x1 = d3.scaleBand()
+          .padding(0.2);
+      
+      var y = d3.scaleLinear()
+          .rangeRound([height, 20]);
+      
+      var z = d3.scaleOrdinal()
+          .range(['#B55C7C', '#CB7695', '#706A28', '#B8B382', "#a05d56", "#d0743c", "#ff8c00"]);
+      
+      d3.csv("data.csv", function(d, i, columns) {
+        for (var i = 1, n = columns.length; i < n; ++i) d[columns[i]] = +d[columns[i]];
+        return d;
+      }, function(error, data) {
+        if (error) throw error;
+      
+        var keys = data.columns.slice(1);
+      
+        x0.domain(data.map(function(d) { return d.State; }));
+        x1.domain(keys).rangeRound([0, x0.bandwidth()]);
+        y.domain([30, d3.max(data, function(d) { return d3.max(keys, function(key) { return d[key]; }); })]).nice();
+      
+        g.append("g")
+          .selectAll("g")
+          .data(data)
+          .enter().append("g")
+            .attr("transform", function(d) { return "translate(" + x0(d.State) + ",0)"; })
+          .selectAll("rect")
+          .data(function(d) { return keys.map(function(key) { return {key: key, value: d[key]}; }); })
+          .enter().append("rect")
+            .attr("x", function(d) { return x1(d.key); })
+            .attr("y", function(d) { return y(d.value); })
+            .attr("width", x1.bandwidth())
+            .attr("height", function(d) { return height - y(d.value); })
+            .attr("fill", function(d) { return z(d.key); });
+      
+        g.append("g")
+            .attr("class", "axis")
+            .attr("transform", "translate(0," + height +")")
+            .call(d3.axisBottom(x0));
+      
+        g.append("g")
+            .attr("class", "axis")
+            .call(d3.axisLeft(y).ticks(null, "s"))
+          .append("text")
+            .attr("x", 2)
+            .attr("y", y(y.ticks().pop()) + 0.5)
+            .attr("dy", "0.32em")
+            .attr("fill", "#000")
+            .attr("font-size", 20)
+            .attr("font-weight", "bold")
+            .attr("text-anchor", "start")
+            .text("Niveles de Ansiedad Infantil (%)");
+      
+        var legend = g.append("g")
+            .attr("font-family", "sans-serif")
+            .attr("font-weight", "bold")
+            .attr("font-size", 11)
+            .attr("text-anchor", "end")
+          .selectAll("g")
+          .data(keys.slice().reverse())
+          .enter().append("g")
+            .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+      
+        legend.append("rect")
+            .attr("x", width - 19)
+            .attr("width", 19)
+            .attr("height", 19)
+            .attr("fill", z);
+      
+        legend.append("text")
+            .attr("x", width - 24)
+            .attr("y", 10.5)
+            .attr("dy", "0.32em")
+            .text(function(d) { return d; });
+      });
+      </script>
+</div>
+
+<div id="fond"></div>
+
+<div class="bar0gr1" id="bl01gr1">
+</div>
+<div class="bar0gr1" id="bl02gr1">
+</div>
+<div class="bar0gr1" id="bl03gr1">
+</div>
+<div class="bar0gr1" id="bl04gr1">
+</div>
+
+<div class="butgrap" id="butgr1">
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">< Atrás</font></h1>
+</div>
+<div class="butgrap2" id="butgra">
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">< Atrás</font></h1>
+</div>
+
+<div class="bar1gr1" id="blo1gr1">
+</div>
+<div class="bar1gr1" id="blo2gr1">
+</div>
+<div class="bar1gr1" id="blo3gr1">
+</div>
+<div class="bar1gr1" id="blo4gr1">
+</div>
+
+
+<div id="ara1" class="fl1"></div>
+<div id="ara2" class="fl1"></div>
+<div id="ara3" class="fl1"></div>
+<div id="ara4" class="fl1"></div>
+<div id="arb1" class="fl1"></div>
+<div id="arb2" class="fl1"></div>
+<div id="arb3" class="fl1"></div>
+<div id="arb4" class="fl1"></div>
+<div id="arc1" class="fl2"></div>
+<div id="arc2" class="fl2"></div>
+<div id="arc3" class="fl2"></div>
+<div id="arc4" class="fl2"></div>
+<div id="ard1" class="fl2"></div>
+<div id="ard2" class="fl2"></div>
+<div id="ard3" class="fl2"></div>
+<div id="ard4" class="fl2"></div>
+
+<div class="opcio" id="lap1">
+</div>
+<div class="opcio" id="lap2">
+</div>
+<div class="opcio" id="lap3">
+</div>
+
+
+<div class="opcio1" id="lap4">
+</div>
+<div class="opcio1" id="lap5">
+</div>
+<div class="opcio1" id="lap6">
+</div>
+
+
+<div id="ej1">
+  <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Ejemplo N°1</font></h1>
+</div>
+<div id="ej4" class="eja">
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">"Niños Jóvenes con Ansiedad"</font></h1>
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">(EE.UU., 2015)</font></h1>
+</div>
+<div id="ej5" class="eja">
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">"Niveles de Concentración"</font></h1>
+  <h1 style="text-align: center;"><font size="0.0001" color="#FFFFFF">  .  </font></h1>
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">(EE.UU., 2020)</font></h1>
+</div>
+<div id="ej2">
+  <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Ejemplo N°2</font></h1>
+</div>
+<div id="ej3">
+  <h1 style="text-align: center;"><font size="6" color="#FFFFFF">Ejemplo N°3</font></h1>
+</div>
+<div id="ej6" class="eja">
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">"Problemas de Comportamiento Escolar"</font></h1>
+  <h1 style="text-align: center;"><font size="5" color="#FFFFFF">(Israel, 2022)</font></h1>
+</div>
+
+<div id="por1" class="est1">
+  <h1 style="text-align: center;"><font size="7" color="#B55C7C">53.4%</font></h1>
+</div>
+<div id="par1" class="est1">
+  <h1 style="text-align: center;"><font size="6" color="#B55C7C">Inicio</font></h1>
+</div>
+<div id="por2" class="est1">
+  <h1 style="text-align: center;"><font size="7" color="#B55C7C">49.4%</font></h1>
+</div>
+<div id="par2" class="est1">
+  <h1 style="text-align: center;"><font size="6" color="#B55C7C">-4%</font></h1>
+</div>
+<div id="por3" class="est1">
+  <h1 style="text-align: center;"><font size="7" color="#706A28">54.5%</font></h1>
+</div>
+<div id="par3" class="est1">
+  <h1 style="text-align: center;"><font size="6" color="#706A28">Inicio</font></h1>
+</div>
+<div id="por4" class="est1">
+  <h1 style="text-align: center;"><font size="7" color="#706A28">56.5%</font></h1>
+</div>
+<div id="par4" class="est1">
+  <h1 style="text-align: center;"><font size="6" color="#706A28">+2%</font></h1>
+</div>
+
+
+</body>
+</html>

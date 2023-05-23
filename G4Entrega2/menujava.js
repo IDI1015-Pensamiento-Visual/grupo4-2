@@ -1,0 +1,58 @@
+$(document).ready(function(){
+    $('#ini1').attr('hidden','hidden');
+    $('#act1').attr('hidden','hidden');
+    $('#ref1').attr('hidden','hidden');
+    $('#efe1').attr('hidden','hidden');
+
+    $("#inicio").mouseenter(function(){
+        $("#ini1").removeAttr("hidden");
+        });
+    $("#inicio").mouseleave(function(){
+        $("#ini1").attr('hidden','hidden');
+        });
+    $("#ini1").click(function(){
+        $(location).attr('href',"mainarthe.html");
+        });
+        $("#inicio").click(function(){
+            $(location).attr('href',"mainarthe.html");
+            });
+
+    $("#activi").mouseenter(function(){
+        $("#act1").removeAttr("hidden");
+        });
+    $("#activi").mouseleave(function(){
+        $("#act1").attr('hidden','hidden');
+        });
+    $("#act1").click(function(){
+        $(location).attr('href',"tipoarthe.html");
+        });
+        $("#activi").click(function(){
+            $(location).attr('href',"tipoarthe.html");
+            });
+
+    $("#efecti").mouseenter(function(){
+        $("#efe1").removeAttr("hidden");
+        });
+    $("#efecti").mouseleave(function(){
+        $("#efe1").attr('hidden','hidden');
+        });
+    $("#efe1").click(function(){
+        $(location).attr('href',"efecarthe.html");
+        });
+        $("#efecti").click(function(){
+            $(location).attr('href',"efecarthe.html");
+            });
+    
+    $("#refer").mouseenter(function(){
+        $("#ref1").removeAttr("hidden");
+        });
+    $("#refer").mouseleave(function(){
+        $("#ref1").attr('hidden','hidden');
+        });
+    $("#ref1").click(function(){
+        $(location).attr('href',"refearthe.html");
+        });
+        $("#refer").click(function(){
+            $(location).attr('href',"refearthe.html");
+            });
+});
